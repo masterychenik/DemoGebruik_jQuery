@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Demo Olga</title>
+<!-- Voeg de jQuery-bibliotheek toe via een CDN (Content Delivery Network) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+/* Stijl voor het div-element,oorspronkelijke staat van div-element */
+#kleurVeranderDiv {
+width: 200px;
+height: 200px;
+background-color: lightblue;
+}
+</style>
+</head>
+<body>
+<h1>jQuery Achtergrondkleur, Tekst en Grootte Veranderen</h1>
+
+
+<div id="kleurVeranderDiv">Mijn element om te veranderen</div>
+
+<!-- Knoppen die verschillende acties uitvoeren -->
+<button id="query1Knop">Verander Kleur</button>
+<button id="query2Knop"> Verander Tekst</button>
+<button id="query3Knop">Verander Grootte</button>
+<button id="resetKnop">Reset Alle Aanpassingen</button>
+
+<script>
+// jQuery-code om verschillende acties uit te voeren met de knoppen
+$(document).ready(function () {
+// Query 1: Verander de achtergrondkleur naar rood
+$("#query1Knop").click(function () {
+$("#kleurVeranderDiv").css("background-color", "lightgreen");
+});
+
+// Query 2: Verander de tekst van het div-element
+$("#query2Knop").click(function () {
+$("#kleurVeranderDiv").text("De tekst is gewijzigd!");
+});
+
+// Query 3: Verander de grootte van het div-element
+$("#query3Knop").click(function () {
+$("#kleurVeranderDiv").css({
+"width": "300px",
+"height": "300px"
+});
+
+// Query 4: Reset Alle Aanpassingen
+$("#resetKnop").click(function () {
+// Zet de achtergrondkleur terug naar de oorspronkelijke staat (lichtblauw)
+$("#kleurVeranderDiv").css("background-color", "lightblue");
+
+// Zet de tekst terug naar de oorspronkelijke staat
+$("#kleurVeranderDiv").text("Mijn element om te veranderent");
+
+// Zet de grootte terug naar de oorspronkelijke staat (200px x 200px)
+$("#kleurVeranderDiv").css({
+"width": "200px",
+"height": "200px"
+});
+});
+});
+
+});
+
+</script>
+</body>
+</html>
